@@ -2,6 +2,7 @@ package net.nordicstew.twistingslopes;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.nordicstew.twistingslopes.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +13,6 @@ public class TwistingSlopes implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
 	}
 }
