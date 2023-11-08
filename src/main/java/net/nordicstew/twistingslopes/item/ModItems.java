@@ -13,6 +13,6 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(TwistingSlopes.MOD_ID, name), item);
     }
     public static void registerModItems() {
-        TwistingSlopes.LOGGER.info("Registring Mod Items for " + TwistingSlopes.MOD_ID);
+        TwistingSlopes.LOGGER.info("Registering Mod Items for " + TwistingSlopes.MOD_ID);
     }
 }
