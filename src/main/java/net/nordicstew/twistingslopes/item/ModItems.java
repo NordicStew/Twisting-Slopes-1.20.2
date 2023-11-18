@@ -10,15 +10,20 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.nordicstew.twistingslopes.TwistingSlopes;
 import net.nordicstew.twistingslopes.block.ModBlocks;
+import org.jetbrains.annotations.NotNull;
 
 public class ModItems {
 
-    private static void addItemsToBuildingBlocksTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(ModBlocks.FROZEN_STONE_BLOCK);
+    public static final Item FROST_ROD = registerItem("frost_rod", new Item(new FabricItemSettings()));
+    private static void addItemsToBuildingBlocksTabItemGroup(@NotNull FabricItemGroupEntries entries) {
+        entries.add(ModBlocks.FROZEN_STONE);
+    }
+    private static void addItemsToIngredientTabItemGroup(@NotNull FabricItemGroupEntries entries) {
+        entries.add(ModItems.FROST_ROD);
     }
 
-    private static void addItemsToNaturalTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(ModBlocks.FROZEN_STONE_BLOCK);
+    private static void addItemsToNaturalTabItemGroup(@NotNull FabricItemGroupEntries entries) {
+        entries.add(ModBlocks.FROZEN_STONE);
     }
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(TwistingSlopes.MOD_ID, name), item);
@@ -27,6 +32,7 @@ public class ModItems {
         TwistingSlopes.LOGGER.info("Registering Mod Items for " + TwistingSlopes.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModItems::addItemsToBuildingBlocksTabItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientTabItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemsToNaturalTabItemGroup);
     }
 }

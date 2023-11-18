@@ -12,12 +12,14 @@ import net.nordicstew.twistingslopes.block.ModBlocks;
 
 public class ModItemGroups {
 
-    public static final ItemGroup FROZEN_STONE_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(TwistingSlopes.MOD_ID, "frozen_stone"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.frozen_stone"))
-                    .icon(() -> new ItemStack(ModBlocks.FROZEN_STONE_BLOCK)).entries((displayContext, entries) -> {
+    public static final ItemGroup TWISTING_SLOPES_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(TwistingSlopes.MOD_ID, "twistingslopes"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.twistingslopes"))
+                    .icon(() -> new ItemStack(ModItems.FROST_ROD)).entries((displayContext, entries) -> {
 
-                        entries.add(ModBlocks.FROZEN_STONE_BLOCK);
+                        entries.add(ModItems.FROST_ROD);
+
+                        entries.add(ModBlocks.FROZEN_STONE);
 
                     }).build());
     public static void registerItemGroups() {

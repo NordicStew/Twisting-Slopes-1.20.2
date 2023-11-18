@@ -1,5 +1,9 @@
 {
-  "block.twistingslopes.frozen_stone_block": "Frozen Stone",
+  "itemgroup.twistingslopes": "Twisting Slopes",
 
-  "itemgroup.frozen_stone": "Twisting Slopes"
+  "item.twistingslopes.frost_rod": "Frost Rod",
+
+  "block.twistingslopes.frozen_stone": "Frozen Stone"
+
+
 }

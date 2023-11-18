@@ -15,7 +15,7 @@ import net.nordicstew.twistingslopes.TwistingSlopes;
 
 public class ModBlocks {
 
-    public static final Block FROZEN_STONE_BLOCK = registerBlock("frozen_stone_block",
+    public static final Block FROZEN_STONE = registerBlock("frozen_stone",
     new Block(FabricBlockSettings.create().mapColor(MapColor.DARK_AQUA).instrument(Instrument.BASEDRUM).requiresTool().strength(28.0f, 52.0f).sounds(BlockSoundGroup.NETHERRACK)));
 
     private static Block registerBlock(String name, Block block) {
